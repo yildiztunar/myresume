@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Language from './components/Language'
-import Theme from './components/Theme'
+import Header from './components/Header'
 
 function App() {
   
@@ -11,8 +11,8 @@ function App() {
   return (
     <>
     <div className="App">
-     <Theme />
-      <Language/>
+      <Header/>
+    
     </div>
     </>
   )
