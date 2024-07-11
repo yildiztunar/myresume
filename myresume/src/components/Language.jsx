@@ -14,7 +14,8 @@ export default function Language() {
       <button onClick={changeLanguage}>
         {i18n.language === 'tr' ? 'İNGİLİZCE’YE GEÇ' : 'TÜRKÇE’YE GEÇ'}
       </button>
-      Aktif dil: {i18n.language}
+
+
     </div>
   );
 }
