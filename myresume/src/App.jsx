@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Language from './components/Language'
 import Header from './components/Header'
+import Skills from './components/Skills'
+import Profile from './components/Profile'
 
 function App() {
   
@@ -12,7 +14,8 @@ function App() {
     <>
     <div className="App">
       <Header/>
-    
+      <Skills/>
+      <Profile/>
     </div>
     </>
   )

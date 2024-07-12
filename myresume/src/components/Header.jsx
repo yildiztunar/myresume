@@ -41,6 +41,7 @@ const MeTitle = styled.h1`
   font-size: 3rem;
   font-weight: bold;
   text-align: left;
+  color: #CBF281;
 `;
 
 const MeInformation = styled.h1`
@@ -82,7 +83,7 @@ function Header() {
         </TitleSection>
         
         <FirstMiddleSection>
-        <MeTitle style={{ color: theme === "light" ? "#CBF180" : "black" }}>
+        <MeTitle>
             {t('meTitle')}
         </MeTitle>
 
