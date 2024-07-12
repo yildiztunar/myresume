@@ -1,0 +1,53 @@
+import React from 'react';
+import Skill from './Skill';
+import JsLogo from '../assets/js-logo.png';
+import ReactLogo from '../assets/react-logo.png';
+import ReduxLogo from '../assets/redux-logo.png';
+import NodeLogo from '../assets/node-logo.png';
+import VscodeLogo from '../assets/vscode-logo.png';
+import FigmaLogo from '../assets/figma-logo.png';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+
+const skillsData = [
+  { name: 'JAVASCRIPT', image: JsLogo },
+  { name: 'REACT', image: ReactLogo },
+  { name: 'REDUX', image: ReduxLogo },
+  { name: 'NODE', image: NodeLogo },
+  { name: 'VS CODE', image: VscodeLogo },
+  { name: 'FIGMA', image: FigmaLogo },
+];
+
+const Skills = () => {
+  const { t } = useTranslation();
+  const theme = useSelector((state) => state.theme);
+
+  const firstColSkills = skillsData.slice(0, 3);
+  const secondColSkills = skillsData.slice(3, 6);
+
+  return (
+    <div
+      className={`flex px-32 py-16 gap-x-20 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
+    >
+      <div
+        className={`text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}
+      >
+        {t('skillsTitle')}
+      </div>
+      <div className="flex flex-wrap justify-between gap-x-20">
+        <div className="flex flex-col items-start ">
+          {firstColSkills.map((skill, index) => (
+            <Skill key={index} name={skill.name} image={skill.image} />
+          ))}
+        </div>
+        <div className="flex flex-col items-start ">
+          {secondColSkills.map((skill, index) => (
+            <Skill key={index} name={skill.name} image={skill.image} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Skills;
