@@ -15,7 +15,11 @@ export default {
       'purpletext': '#4832D3',
       'lilactext': '#C1BAED',
       'graytext': '#777777',
-      'whitetext': '#FFFFFF'
+      'whitetext': '#FFFFFF',
+      'darkgraytext': '#383838',
+      'linktext': '#120B39',
+      'emailtext': '#4731D3',
+      'footerlilactext': '#8F88FF',
     },
     backgroundColor: {
       'greenbg': '#CBF281',
@@ -23,7 +27,8 @@ export default {
       'bluebg': '#171043',
       'darkgreenbg': '#19210B',
       'darkpurplebg': '#252128',
-      'whitebg': '#FFFFFF'
+      'whitebg': '#FFFFFF',
+      'lilacbg': '#8173DA'
     },
     fontSize: {
       'tiny': '0.875rem', // 14px
@@ -33,8 +38,18 @@ export default {
       '2xl': '1.5rem',  // 24px
       '3xl': '1.875rem', // 30px
       '4xl': '2rem', //32px
+      '4.5xl': '2.188rem', //35px
       '5xl': '3rem',    // 48px
       '6xl': '3.375rem'  //54px
+    },
+    borderRadius: {
+      'rounded-md': '0.375rem', //6px
+      'rounded-lg': '0.6rem', //8px
+      'rounded-xl': '0.75rem',	//12px
+      'rounded-2xl': '1.1rem', //18px
+      'rounded-3xl': '1.438', //23px
+      'rounded-l-xl': '0.75rem', //12px top-left and bottom-left
+      'rounded-r-xl': '0.75rem', //12px top-right and bottom-right
     }
   },
   },
