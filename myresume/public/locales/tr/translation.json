@@ -24,5 +24,11 @@
     "project2Information": "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
     "contactTitle": "Mesaj Gonder!",
     "contactTitleInformation": "Sorun veya onerin mi var, ya da sadece Merhaba mi demek istiyorsun? Haydi benimle iletisime gec!",
-    "email": "ozdemirryildizz@gmail.com"
+    "email": "ozdemirryildizz@gmail.com",
+    "loginTitle": "GİRİŞ YAP",
+    "username": "KULLANICI ADI",
+    "password": "ŞİFRE",
+    "submit": "GÖNDER",
+    "requiredUsername": "Lutfen kullanici adinizi girin.",
+    "requiredPassword": "Lutfen en az 8 karakter girin."
 }
