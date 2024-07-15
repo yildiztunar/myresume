@@ -7,17 +7,25 @@ const Project = ({ title, image, description, programs }) => {
   const theme = useSelector((state) => state.theme);
 
   return (
-    <div className="flex items-center p-4  ">
-        <div>
-        <img src={image} alt={title} className="rounded-l-xl  " />
+    <div className="flex flex-row my-4">
+        <div className={`flex rounded-l-xl items-center ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}>
+        <img src={image} alt={title} className="rounded-l-xl w-screen h-fit " />
         </div>
       
         <div
-        className={`flex flex-col text-left gap-y-8 rounded-r-xl ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
+        className={`flex flex-col leading-tight text-left px-12 py-14 gap-y-4 rounded-r-xl ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
         >
-      <h1 className={`text-4xl " ${theme === 'light' ? 'text-purpletext' : 'text-lilactext'}`}>{title}</h1>
-      <p className={`text-2xl " ${theme === 'light' ? 'text-darkgraytext' : 'text-whitetext'}`}>{description}</p>
-      <div className={`text-tiny text-whitetext ${theme === 'light' ? 'bg-purplebg' : 'bg-lilacbg'}`}>{programs}</div>
+      <h1 className={`text-4xl font-bold " ${theme === 'light' ? 'text-purpletext' : 'text-lilactext'}`}>{title}</h1>
+      <p className={`text-lg " ${theme === 'light' ? 'text-darkgraytext' : 'text-whitetext'}`}>{description}</p>
+      
+      <div className='flex flex-row gap-x-1 '>
+          {programs.map((program, index) => (
+          <button key={index} className={`text-tiny text-whitetext rounded-3xl ${theme === 'light' ? 'bg-purplebg' : 'bg-lilacbg'}`}>
+          {program}
+          </button>
+          ))}
+      </div>
+      
       <div className={`flex flex-row text-base " ${theme === 'light' ? 'text-linktext' : 'text-greentext'}`}>
       <p>{t('viewSite')}</p>
       <p>{t('gitHub')}</p>

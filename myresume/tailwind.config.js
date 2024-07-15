@@ -11,6 +11,8 @@ export default {
       'profileImg': '0 8px 28px -6px rgba(24, 39, 75, 0.12)',
     },
     textColor: {
+      'languagetextgreen': '#CAF181',
+      'languagetextgray': '#D9D9D9',
       'greentext': '#CBF281',
       'purpletext': '#4832D3',
       'lilactext': '#C1BAED',
@@ -20,12 +22,13 @@ export default {
       'linktext': '#120B39',
       'emailtext': '#4731D3',
       'footerlilactext': '#8F88FF',
+      'buttontext': '#3730A3',
     },
     backgroundColor: {
       'greenbg': '#CBF281',
       'purplebg': '#4731D3',
       'bluebg': '#171043',
-      'darkgreenbg': '#19210B',
+      'darkgreenbg': '#1A210B',
       'darkpurplebg': '#252128',
       'whitebg': '#FFFFFF',
       'lilacbg': '#8173DA'

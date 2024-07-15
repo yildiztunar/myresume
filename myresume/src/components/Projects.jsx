@@ -16,16 +16,15 @@ const Projects = () => {
 
   return (
     <div
-      className={`flex px-32 py-16 gap-x-20 ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}
+      className={`flex px-32 py-16  ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}
     >
-
-<div
-        className={`text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}
-      >
-        {t('projectsTitle')}
-
-      <div className="flex flex-wrap justify-between gap-x-20">
-        <div className="flex flex-col items-start ">
+        <div
+        className={` text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}
+        >
+          <div className='text-5xl font-bold'>
+          {t('projectsTitle')}
+          </div>
+      
           {projectData.map((project, index) => (
             <Project 
               key={index} 
@@ -35,8 +34,8 @@ const Projects = () => {
               programs={project.programs}
             />
           ))}
-        </div>
-        </div>
+        
+        
       </div>
     </div>
   );

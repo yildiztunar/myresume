@@ -13,10 +13,10 @@ const Theme = () => {
 
   return (
     <button
-      className={`bg-${theme === 'light' ? 'white' : 'black'} text-3xl font-bold underline text-${theme === 'light' ? 'black' : 'white'}`}
+      className={`bg-transparent  text-${theme === 'light' ? 'emailtext' : 'whitetext'}`}
       onClick={changeTheme}
     >
-      {theme === 'light' ? 'Dark Theme' : 'Light Theme'}
+      {theme === 'light' ? 'DARK MODE' : 'LIGHT MODE'}
     </button>
   );
 };

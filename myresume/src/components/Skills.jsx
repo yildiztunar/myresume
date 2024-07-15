@@ -27,14 +27,14 @@ const Skills = () => {
 
   return (
     <div
-      className={`flex px-32 py-16 gap-x-20 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
+      className={`flex px-32 py-16 gap-x-32 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
     >
       <div
         className={`text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}
       >
         {t('skillsTitle')}
       </div>
-      <div className="flex flex-wrap justify-between gap-x-20">
+      <div className="flex flex-wrap justify-between gap-x-32">
         <div className="flex flex-col items-start ">
           {firstColSkills.map((skill, index) => (
             <Skill key={index} name={skill.name} image={skill.image} />
