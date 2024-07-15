@@ -1,114 +1,61 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import lightThemeImage from "../assets/header-bg-light.jpg";
-import darkThemeImage from "../assets/header-bg-dark.jpg";
+import bannerImg from "../assets/bannerImg.png";
 import Theme from "./Theme";
 import Language from "./Language";
 
-const HeaderStyle = styled.div`
-  font-family: "Inter", sans-serif;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 60vh;
-  background-position: center;
-  display: flex;
-`;
-
-const FirstSection = styled.div`
-display:flex;
-flex-direction: column;
-justify-content: center;
-margin: 0vh 0vh 0vh 14vh;
-width: 50vh;
-`
-const TitleSection = styled.h1`
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left;
-  margin-bottom:5rem;
-  color: #CBF281;
-
-`
-const FirstMiddleSection = styled.div`
-display:flex;
-flex-direction: column;
-justify-content: center;
-gap: 1.5rem;
-`
-const MeTitle = styled.h1`
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: left;
-  color: #CBF281;
-`;
-
-const MeInformation = styled.h1`
-  font-size: 1.3rem;
-  text-align: left;
-
-`;
-
-const ButtonSection = styled.div`
-  width: 50vh;
-  display:flex;
-  flex-direction: row;
-  justify-content: left;
-  color:#3730A3;
-  gap: 0.5rem;
-`
-const MyButton =styled.button`
-  font-weight: bold;
-`
-const SecondSection = styled.div`
-`
-
-const ThirdSection = styled.div`
-`
 
 function Header() {
   const { t } = useTranslation();
   const theme = useSelector((state) => state.theme);
 
-  const backgroundImage = theme === "light" ? lightThemeImage : darkThemeImage;
 
   return (
-    <HeaderStyle style={{ backgroundImage: `url(${backgroundImage})` }}>
+   <div className="flex flex-row text-left ">
+    
+    <div className={`flex flex-col w-4/6 pl-32 pb-32 gap-y-32 ${theme === 'light' ? 'bg-purplebg' : 'bg-bluebg'}`}>
+      <div className="flex flex-col">
+        <div className="flex justify-end">
+          <Language />
+        </div>
+        <div className="text-4xl text-greentext font-semibold">
+          yıldız
+        </div>
+      </div>
 
-    <FirstSection>
+      <div className="flex flex-col gap-y-9 w-8/12">
+        <div className="text-6xl text-greentext font-semibold leading-none">
+          {t('meTitle')}
+        </div>
+        <div className="text-xl text-whitetext leading-none">
+          {t('meInformation')}
+        </div>
+        <div className="flex flex-row gap-1.5">
+          <button className="text-lg text-buttontext rounded-md">
+            GitHub
+          </button>
+          <button className="text-lg text-buttontext rounded-md">
+            Linkedin
+          </button>
+        </div>
+      </div>
 
-        <TitleSection>
-            yildiz
-        </TitleSection>
-        
-        <FirstMiddleSection>
-        <MeTitle>
-            {t('meTitle')}
-        </MeTitle>
+    </div>
 
-        <MeInformation style={{ color: 'white' }}>
-            {t('meInformation')}
-        </MeInformation>
+    <div className={`flex flex-col pb-16 w-2/6 ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}>
+        <div>
+          <Theme />
+        </div>
+        <div className="flex justify-center items-center w-full h-full">
+          <div className="relative w-4/5 ml-[-400px]">
+            <img src={bannerImg} className="rounded-2xl" />
+          </div>
+        </div>
+      </div>
+            
 
-        <ButtonSection>
-            <MyButton>Github</MyButton>
-            <MyButton>Linkedin</MyButton>
-        </ButtonSection>
-        </FirstMiddleSection>
-
-    </FirstSection>
-
-    <SecondSection>
-        <Language />
-    </SecondSection>
-
-    <ThirdSection>
-        <Theme />
-    </ThirdSection>
-
-
-    </HeaderStyle>
+  </div>
   );
 }
 
