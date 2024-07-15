@@ -53,6 +53,9 @@ export default {
       'rounded-3xl': '1.438', //23px
       'rounded-l-xl': '0.75rem', //12px top-left and bottom-left
       'rounded-r-xl': '0.75rem', //12px top-right and bottom-right
+    },
+    borderColor: {
+      'purpleborder': '#4832D3',
     }
   },
   },
