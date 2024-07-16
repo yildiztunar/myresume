@@ -30,5 +30,7 @@
     "password": "ŞİFRE",
     "submit": "GÖNDER",
     "requiredUsername": "Lutfen kullanici adinizi girin.",
-    "requiredPassword": "Lutfen en az 8 karakter girin."
+    "requiredPassword": "Lutfen en az 8 karakter girin.",
+    "moreInfo": "Daha fazlasina erismek icin Giris Yapin!",
+    "invalidCredentials": "Lutfen sisteme kayitli oldugunuz kullanici adi ve sifrenizi girin."
 }
