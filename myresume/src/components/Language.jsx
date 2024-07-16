@@ -9,6 +9,7 @@ export default function Language() {
   const changeLanguage = () => {
     const newLanguage = i18n.language === 'tr' ? 'en' : 'tr';
     i18n.changeLanguage(newLanguage);
+    localStorage.setItem('language', newLanguage);
   };
 
   return (
