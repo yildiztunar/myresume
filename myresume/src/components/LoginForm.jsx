@@ -1,71 +1,85 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
+import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import axios from 'axios';
+import { setUser } from '../store/actions/userActions';
 
-const formDataInitial={
-    username:"",
-    password:""
+const formDataInitial = {
+  username: "",
+  password: ""
 }
 
 const LoginForm = () => {
-const { t } = useTranslation();
+  const { t } = useTranslation();
   const theme = useSelector((state) => state.theme);
+  const location = useLocation();
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const {register, handleSubmit, formState: {errors, isValid}} = 
-  useForm({defaultValues: formDataInitial, mode: "all"});
-  
-  const [formData, setFormData] = useState(formDataInitial);
-
-  const inputChangeHandler = (e) => {
-    const {name, value} = e.target;
-
-    setFormData({
-        ...formData,
-        [name]: value,
-    })
-  }
+  const { register, handleSubmit, formState: { errors, isValid } } = useForm({
+    defaultValues: formDataInitial,
+    mode: "onChange"
+  });
 
   const onFormSubmit = (formData) => {
-    console.log("form submitted: ", formData)
-  }
-
-
-    return (
-        <div>
-        
-            <div
-            className={`flex flex-col px-32 py-16 gap-x-32 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
-            >
-        
-                <div
-                className={`text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}
-                >
-                {t('loginTitle')}
-                </div>
-
-                <div className={`flex flex-col py-16 text-2xl text-left font-semibold  ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}>
-                <form onSubmit={handleSubmit(onFormSubmit)}>
-                <div className='flex flex-col gap-y-8'>
-                    <div className='flex flex-col gap-y-2'>
-                    <label>{t('username')}</label>
-                    <input className='text-black border-gray border-2 rounded-xl w-6/12' type="email" {...register("username")}/>
-                    </div>
-                    <div className='flex flex-col gap-y-2'>
-                    <label>{t('password')}</label>
-                    <input className='text-black border-gray border-2 rounded-xl w-6/12' type="password" {...register("password")}/>
-                    </div>
-                    <button className={`text-2xl text-left font-bold w-6/12 ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}>{t('submit')}</button>
-                </div>
-                </form>
-                </div>
-
-            </div>
-
-        </div>
-    );
+    axios.get("https://669617e40312447373c10664.mockapi.io/api/v1/users", {
+      params: {
+        username: formData.username,
+        password: formData.password
+      }
+    })
+    .then(res => {
+      const user = res.data[0];
+      if (user) {
+        dispatch(setUser(user));
+        console.log(user);
+        history.push("/resume");
+      } else {
+        setErrorMessage(t('invalidCredentials'));
+      }
+    })
+    .catch(error => {
+      setErrorMessage(t('invalidCredentials'));
+    });
   };
-  
-  export default LoginForm;
-  
 
+  return (
+    <div>
+      <div className={`flex flex-col px-32 py-16 gap-x-32 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}>
+        <div className={`text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}>
+          {t('loginTitle')}
+        </div>
+
+        <div className={`flex flex-col py-16 text-2xl text-left font-semibold ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}>
+          <form onSubmit={handleSubmit(onFormSubmit)}>
+            <div className='flex flex-col gap-y-8'>
+              <div className='flex flex-col gap-y-2'>
+                <label htmlFor='username'>{t('username')}</label>
+                <input className='text-black border-gray border-2 rounded-xl w-6/12' type="text" {...register("username", {
+                  required: t('usernameRequired'),
+                  minLength: { value: 6, message: t('requiredUsername') }
+                })} />
+                {errors.username && (<div className='text-red-500 text-xl'> {errors.username.message}</div>)}
+              </div>
+              <div className='flex flex-col gap-y-2'>
+                <label htmlFor='password'>{t('password')}</label>
+                <input className='text-black border-gray border-2 rounded-xl w-6/12' type="password" {...register("password", {
+                  required: t('passwordRequired'),
+                  minLength: { value: 8, message: t('requiredPassword') }
+                })} />
+                {errors.password && (<div className='text-red-500 text-xl'> {errors.password.message}</div>)}
+              </div>
+              <button disabled={!isValid} type="submit" className={`text-2xl text-center font-bold w-6/12 border-2 rounded-xl ${theme === 'light' ? 'text-purpletext border-purple-500' : 'text-greentext border-darkpurple-500'}`}>{t('submit')}</button>
+            </div>
+          </form>
+          {errorMessage && (<div className='text-red-500 text-xl mt-4'>{errorMessage}</div>)}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LoginForm;

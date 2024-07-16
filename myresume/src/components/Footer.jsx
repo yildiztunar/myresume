@@ -5,6 +5,7 @@ import TwitterIcon from '../assets/twitter.svg';
 import CodepenIcon from '../assets/codepen.svg';
 import AtSignIcon from '../assets/at-sign.svg';
 import InstagramIcon from '../assets/instagram.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -25,6 +26,11 @@ const Footer = () => {
         <img src={AtSignIcon} alt="AtSign" />
         <img src={InstagramIcon} alt="Instagram" />
         </div>
+        <Link to="/login">
+        <button className={`text-lg ${theme === 'light' ? 'text-emailtext' : 'text-footerlilactext'}`}>
+            {t('moreInfo')}
+        </button>
+        </Link>
         </div>
     )
 
