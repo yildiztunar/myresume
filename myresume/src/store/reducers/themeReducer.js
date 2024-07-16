@@ -1,4 +1,4 @@
-const initialState = 'light';
+const initialState = localStorage.getItem('theme') || 'light';
 
 const themeReducer = (state = initialState, action) => {
   switch (action.type) {
