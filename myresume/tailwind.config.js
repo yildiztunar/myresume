@@ -57,6 +57,7 @@ export default {
     },
     borderColor: {
       'purpleborder': '#4832D3',
+      'buttonborder': '#3730A3'
     }
   },
   },

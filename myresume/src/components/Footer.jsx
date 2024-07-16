@@ -27,9 +27,9 @@ const Footer = () => {
         <img src={InstagramIcon} alt="Instagram" />
         </div>
         <Link to="/login">
-        <button className={`text-lg ${theme === 'light' ? 'text-emailtext' : 'text-footerlilactext'}`}>
+        <div className={`rounded-md px-6 py-2 font-semibold ${theme === 'light' ? 'bg-white text-buttontext border-buttonborder border-2' : 'bg-darkgreenbg text-white border-white border'}`}>
             {t('moreInfo')}
-        </button>
+        </div>
         </Link>
         </div>
     )

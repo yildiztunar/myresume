@@ -20,16 +20,18 @@ const Project = ({ title, image, description, programs }) => {
       
       <div className='flex flex-row gap-x-1 '>
           {programs.map((program, index) => (
-          <button key={index} className={`text-tiny text-whitetext rounded-3xl ${theme === 'light' ? 'bg-purplebg' : 'bg-lilacbg'}`}>
+          <div key={index} className={`text-tiny px-4 py-1.5 text-whitetext rounded-3xl ${theme === 'light' ? 'bg-purplebg' : 'bg-lilacbg'}`}>
           {program}
-          </button>
+          </div>
           ))}
       </div>
       
-      <div className={`flex flex-row text-base " ${theme === 'light' ? 'text-linktext' : 'text-greentext'}`}>
-      <p>{t('viewSite')}</p>
-      <p>{t('gitHub')}</p>
-        </div>
+        <div className={`flex flex-row text-base gap-y-2" ${theme === 'light' ? 'text-linktext' : 'text-greentext'}`}>
+          <div className='underline'>
+          <a href="https://workintech.com.tr/" target="_blank" rel="noopener noreferrer">{t('viewSite')}</a></div>
+          <div className='underline'>
+          <a href="https://github.com/yildiztunar" target="_blank" rel="noopener noreferrer">{t('gitHub')}</a></div>
+          </div>
         </div>
     </div>
   );

@@ -58,7 +58,7 @@ const LoginForm = () => {
             <div className='flex flex-col gap-y-8'>
               <div className='flex flex-col gap-y-2'>
                 <label htmlFor='username'>{t('username')}</label>
-                <input className='text-black border-gray border-2 rounded-xl w-6/12' type="text" {...register("username", {
+                <input className='text-black border-gray border-2 rounded-md w-6/12' type="text" {...register("username", {
                   required: t('usernameRequired'),
                   minLength: { value: 6, message: t('requiredUsername') }
                 })} />
@@ -66,13 +66,13 @@ const LoginForm = () => {
               </div>
               <div className='flex flex-col gap-y-2'>
                 <label htmlFor='password'>{t('password')}</label>
-                <input className='text-black border-gray border-2 rounded-xl w-6/12' type="password" {...register("password", {
+                <input className='text-black border-gray border-2 rounded-md w-6/12' type="password" {...register("password", {
                   required: t('passwordRequired'),
                   minLength: { value: 8, message: t('requiredPassword') }
                 })} />
                 {errors.password && (<div className='text-red-500 text-xl'> {errors.password.message}</div>)}
               </div>
-              <button disabled={!isValid} type="submit" className={`text-2xl text-center font-bold w-6/12 border-2 rounded-xl ${theme === 'light' ? 'text-purpletext border-purple-500' : 'text-greentext border-darkpurple-500'}`}>{t('submit')}</button>
+              <button disabled={!isValid} type="submit" className={`rounded-md px-6 py-2 w-6/12 font-semibold ${theme === 'light' ? 'bg-white text-buttontext border-buttonborder border' : 'bg-darkgreenbg text-white border-white border'}`}>{t('submit')}</button>
             </div>
           </form>
           {errorMessage && (<div className='text-red-500 text-xl mt-4'>{errorMessage}</div>)}
