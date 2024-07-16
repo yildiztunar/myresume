@@ -14,7 +14,7 @@ export default function Language() {
 
   return (
       <button onClick={changeLanguage}
-      className={`bg-transparent  text-${theme === 'light' ? 'greentext' : 'whitetext'}`}>
+      className={`bg-transparent p-2 font-bold text-tiny md:text-base  text-${theme === 'light' ? 'greentext' : 'whitetext'}`}>
         {i18n.language === 'tr' ? 'İNGİLİZCE’YE GEÇ' : 'TÜRKÇE’YE GEÇ'}
       </button>
 

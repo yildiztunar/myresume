@@ -16,12 +16,12 @@ const Projects = () => {
 
   return (
     <div
-      className={`flex px-32 py-16  ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}
+      className={`flex px-2 md:px-32 py-2 md:py-16  ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}
     >
         <div
-        className={` text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}
+        className={`text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}
         >
-          <div className='text-5xl font-bold'>
+          <div className='text-2xl lg:text-5xl font-bold'>
           {t('projectsTitle')}
           </div>
       

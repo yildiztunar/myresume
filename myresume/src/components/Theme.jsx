@@ -15,7 +15,7 @@ const Theme = () => {
 
   return (
     <button
-      className={`bg-transparent  text-${theme === 'light' ? 'emailtext' : 'whitetext'}`}
+      className={`bg-transparent text-tiny md:text-base p-2 font-bold text-${theme === 'light' ? 'emailtext' : 'whitetext'}`}
       onClick={changeTheme}
     >
       {theme === 'light' ? 'DARK MODE' : 'LIGHT MODE'}

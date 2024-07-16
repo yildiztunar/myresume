@@ -15,8 +15,8 @@ const Project = ({ title, image, description, programs }) => {
         <div
         className={`flex flex-col leading-tight text-left px-12 py-14 gap-y-4 rounded-r-xl ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
         >
-      <h1 className={`text-4xl font-bold " ${theme === 'light' ? 'text-purpletext' : 'text-lilactext'}`}>{title}</h1>
-      <p className={`text-lg " ${theme === 'light' ? 'text-darkgraytext' : 'text-whitetext'}`}>{description}</p>
+      <h1 className={`text-xl lg:text-4xl font-bold " ${theme === 'light' ? 'text-purpletext' : 'text-lilactext'}`}>{title}</h1>
+      <p className={`text-tiny lg:text-lg " ${theme === 'light' ? 'text-darkgraytext' : 'text-whitetext'}`}>{description}</p>
       
       <div className='flex flex-row gap-x-1 '>
           {programs.map((program, index) => (
@@ -26,8 +26,8 @@ const Project = ({ title, image, description, programs }) => {
           ))}
       </div>
       
-        <div className={`flex flex-row text-base gap-y-2" ${theme === 'light' ? 'text-linktext' : 'text-greentext'}`}>
-          <div className='underline'>
+        <div className={`flex flex-row text-tiny lg:text-base" ${theme === 'light' ? 'text-linktext' : 'text-greentext'}`}>
+          <div className='underline pr-2'>
           <a href="https://workintech.com.tr/" target="_blank" rel="noopener noreferrer">{t('viewSite')}</a></div>
           <div className='underline'>
           <a href="https://github.com/yildiztunar" target="_blank" rel="noopener noreferrer">{t('gitHub')}</a></div>

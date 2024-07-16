@@ -4,9 +4,9 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Resume from './pages/Resume'
-import { Redirect } from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute'
-
+import {Bounce, ToastContainer, toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   
@@ -26,8 +26,10 @@ function App() {
       <ProtectedRoute path="/resume">
         <Resume/>
       </ProtectedRoute>
-
+      
+      
     </Switch>
+    <ToastContainer />
     </>
   )
 }

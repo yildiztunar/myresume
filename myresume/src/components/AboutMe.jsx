@@ -7,9 +7,9 @@ const { t } = useTranslation();
   const theme = useSelector((state) => state.theme);
 
     return (
-      <div className='flex flex-col gap-y-8'>
-        <div className="text-wrap text-left text-white text-3xl">{t('aboutMe')}</div>
-        <div className="text-wrap text-left text-white text-lg">{t('aboutMeInformation')}</div>
+      <div className='flex flex-col ml-4 gap-x-8'>
+        <div className="text-wrap text-left text-white text-xl lg:text-3xl">{t('aboutMe')}</div>
+        <div className="text-wrap text-left pt-8 text-white text-tiny lg:text-lg">{t('aboutMeInformation')}</div>
       </div>
     );
   };

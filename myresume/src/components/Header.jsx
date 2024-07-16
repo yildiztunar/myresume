@@ -15,24 +15,24 @@ function Header() {
   return (
    <div className="flex flex-row text-left ">
     
-    <div className={`flex flex-col w-4/6 pl-32 pb-32 gap-y-32 ${theme === 'light' ? 'bg-purplebg' : 'bg-bluebg'}`}>
+    <div className={`flex flex-col w-4/6 pl-2 md:pl-32 pb-2 md:pb-32 gap-y-2 md:gap-y-32 ${theme === 'light' ? 'bg-purplebg' : 'bg-bluebg'}`}>
       <div className="flex flex-col">
         <div className="flex justify-end">
           <Language />
         </div>
-        <div className="text-4xl text-greentext font-semibold">
+        <div className="text-tiny text-greentext font-semibold lg:text-4xl">
           yıldız
         </div>
       </div>
 
       <div className="flex flex-col gap-y-9 w-8/12">
-        <div className="text-6xl text-greentext font-semibold leading-none">
+        <div className="text-2xl text-greentext font-semibold leading-none lg:text-6xl">
           {t('meTitle')}
         </div>
-        <div className="text-xl text-whitetext leading-none">
+        <div className="text-tiny text-whitetext leading-none lg:text-xl">
           {t('meInformation')}
         </div>
-        <div className="flex flex-row gap-2 text-lg">
+        <div className="flex flex-row gap-2 text-tiny md:text-base lg:text-lg">
           <div className={`rounded-md px-6 py-2 font-semibold ${theme === 'light' ? 'bg-white text-buttontext border-buttonborder border' : 'bg-darkgreenbg text-white border-white border'}`}>
           <a href="https://github.com/yildiztunar" target="_blank" rel="noopener noreferrer" >
           GitHub</a>
@@ -51,7 +51,7 @@ function Header() {
           <Theme />
         </div>
         <div className="flex justify-center items-center w-full h-full">
-          <div className="relative w-4/5 ml-[-400px]">
+          <div className="relative w-4/5 ml-[-5px] md:ml-[-250px] lg:ml-[-400px]">
             <img src={bannerImg} className="rounded-2xl shadow-bannerImg" />
           </div>
         </div>

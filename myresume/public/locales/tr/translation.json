@@ -6,7 +6,7 @@
     "profileTitle": "Profil",
     "basicInformation": "Temel Bilgiler",
     "birthday": "Doğum Tarihi",
-    "birthdayText":"01.11.1993",
+    "birthdayText":"1993",
     "locationInformation": "İkamet Şehri",
     "locationInformationText":"Dubai",
     "education": "Eğitim Durumu",
@@ -32,5 +32,7 @@
     "requiredUsername": "Lutfen kullanici adinizi girin.",
     "requiredPassword": "Lutfen en az 8 karakter girin.",
     "moreInfo": "Daha fazlasina erismek icin Giris Yapin!",
-    "invalidCredentials": "Lutfen sisteme kayitli oldugunuz kullanici adi ve sifrenizi girin."
+    "invalidCredentials": "Lutfen sisteme kayitli oldugunuz kullanici adi ve sifrenizi girin.",
+    "loginSuccess": "Giriş başarılı!",
+    "loginFail": "Giriş başarısız! Yeniden deneyin."
 }

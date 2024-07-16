@@ -58,9 +58,12 @@ export default {
     borderColor: {
       'purpleborder': '#4832D3',
       'buttonborder': '#3730A3'
-    }
+    },
+    screens: {
+      'xs': '1px',
+      'md': '756px',
+      'lg': '992px',
+    },
   },
-  },
-  plugins: []
-}
-
+  plugins: [],
+}}
