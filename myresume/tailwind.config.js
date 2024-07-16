@@ -23,6 +23,7 @@ export default {
       'emailtext': '#4731D3',
       'footerlilactext': '#8F88FF',
       'buttontext': '#3730A3',
+      'darkpurpletext': '#252128'
     },
     backgroundColor: {
       'greenbg': '#CBF281',
