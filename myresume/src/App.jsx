@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Resume from './pages/Resume'
 import ProtectedRoute from './components/ProtectedRoute'
-import {Bounce, ToastContainer, toast} from "react-toastify";
+import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
