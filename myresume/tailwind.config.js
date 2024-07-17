@@ -61,7 +61,7 @@ export default {
     },
     screens: {
       'xs': '1px',
-      'md': '756px',
+      'md': '768px',
       'lg': '992px',
     },
   },
