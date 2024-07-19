@@ -9,6 +9,19 @@ import {Bounce, ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
+const notify = () => 
+  toast.success(t('loginSuccess'), {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    transition: Bounce,
+    })
+
 const formDataInitial = {
   username: "",
   password: ""
@@ -39,17 +52,7 @@ const LoginForm = () => {
       const user = res.data[0];
       dispatch(setUser(user));
       console.log(user);
-      toast.success(t('loginSuccess'), {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-        })
+      notify()
       history.push("/resume");
   
  
