@@ -22,9 +22,6 @@ const Skills = () => {
   const { t } = useTranslation();
   const theme = useSelector((state) => state.theme);
 
-  const firstColSkills = skillsData.slice(0, 3);
-  const secondColSkills = skillsData.slice(3, 6);
-
   return (
     <div
       className={`flex flex-col lg:flex-row px-2 lg:px-32 gap-x-2 py-2 lg:py-16 lg:gap-x-32 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
@@ -34,17 +31,10 @@ const Skills = () => {
       >
         {t('skillsTitle')}
       </div>
-      <div className="flex flex-wrap justify-between gap-x-16 lg:gap-x-32">
-        <div className="flex flex-row lg:flex-col items-start ">
-          {firstColSkills.map((skill, index) => (
+      <div className="grid lg:grid-cols-2 md:grid-cols-3 xs:grid-cols-3 justify-between gap-x-16 lg:gap-x-36">
+          {skillsData.map((skill, index) => (
             <Skill key={index} name={skill.name} image={skill.image} />
           ))}
-        </div>
-        <div className="flex flex-row lg:flex-col items-start ">
-          {secondColSkills.map((skill, index) => (
-            <Skill key={index} name={skill.name} image={skill.image} />
-          ))}
-        </div>
       </div>
     </div>
   );
