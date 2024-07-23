@@ -93,33 +93,31 @@ const LoginForm = () => {
   return (
     
         <div>
-        <div className={`text-2xl lg:text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}>
-          {t('loginTitle')}
-        </div>
+        
 
         <div className={`flex flex-col py-16 text-lg lg:text-2xl text-left font-semibold ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}>
           <form onSubmit={handleSubmit(onFormSubmit)}>
-            <div className='flex flex-col gap-y-8'>
-              <div className='flex flex-col gap-y-2'>
+            <div className='flex flex-col gap-y-6'>
+              <div className='flex flex-col text-lg lg:text-xl'>
                 <label htmlFor='username'>{t('username')}</label>
-                <input className='text-black border-gray border-2 rounded-md w-auto' type="text" {...register("username", {
+                <input className='text-black border-gray border-2 rounded-md w-auto text-lg lg:text-xl' type="text" {...register("username", {
                   required: t('requiredUsername'),
                   minLength: { value: 6, message: t('requiredUsername') }
                 })} />
-                {errors.username && (<div className='text-red-500 text-tiny lg:text-xl'> {errors.username.message}</div>)}
+                {errors.username && (<div className='text-red-500 text-lg lg:text-xl'> {errors.username.message}</div>)}
               </div>
-              <div className='flex flex-col gap-y-2'>
+              <div className='flex flex-col gap-y-2 text-lg lg:text-xl'>
                 <label htmlFor='password'>{t('password')}</label>
-                <input className='text-black border-gray border-2 rounded-md w-auto' type="password" {...register("password", {
+                <input className='text-black border-gray border-2 rounded-md w-auto text-lg lg:text-xl' type="password" {...register("password", {
                   required: t('requiredPassword'),
                   minLength: { value: 8, message: t('requiredPassword') }
                 })} />
-                {errors.password && (<div className='text-red-500  text-tiny lg:text-xl'> {errors.password.message}</div>)}
+                {errors.password && (<div className='text-red-500 text-lg lg:text-xl'> {errors.password.message}</div>)}
               </div>
-              <button disabled={!isValid} type="submit" className={`rounded-md px-6 py-2 w-auto font-semibold  ${theme === 'light' ? 'bg-white hover:bg-purplebg hover:text-whitetext hover:border-white text-buttontext border-buttonborder border' : 'bg-darkgreenbg text-white border-white border hover:bg-whitebg hover:text-darkgraytext'}`}>{t('submit')}</button>
+              <button disabled={!isValid} type="submit" className={`rounded-md px-6 py-2 text-lg lg:text-xl w-auto font-semibold  ${theme === 'light' ? 'bg-white hover:bg-purplebg hover:text-whitetext hover:border-white text-buttontext border-buttonborder border' : 'bg-darkgreenbg text-white border-white border hover:bg-whitebg hover:text-darkgraytext'}`}>{t('submit')}</button>
               </div>
           </form>
-          {errorMessage && (<div className='text-red-500  text-tiny lg:text-xl mt-4'>{errorMessage}</div>)}
+          {errorMessage && (<div className='text-red-500 text-lg lg:text-xl mt-4'>{errorMessage}</div>)}
         </div>
       </div>
   );
