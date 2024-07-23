@@ -20,7 +20,7 @@ const skillsData = [
 
 const Skills = () => {
   const { t } = useTranslation();
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
 
   return (
     <div

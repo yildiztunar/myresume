@@ -7,7 +7,7 @@ import Project from './Project';
 
 const Projects = () => {
   const { t } = useTranslation();
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
 
   const projectData = [
     { title: t('project1Title'), image: Workintech, description: t('project1Information'), programs: ['react', 'redux', 'vercel'] },

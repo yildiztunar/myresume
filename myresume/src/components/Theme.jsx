@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setTheme } from '../store/actions/themeActions';
 
 const Theme = () => {
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
   const dispatch = useDispatch();
   
 

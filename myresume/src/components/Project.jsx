@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const Project = ({ title, image, description, programs }) => {
   const { t } = useTranslation();
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
 
   return (
     <div className="flex flex-row my-4">
@@ -26,10 +26,10 @@ const Project = ({ title, image, description, programs }) => {
           ))}
       </div>
       
-        <div className={`flex flex-row text-tiny lg:text-base" ${theme === 'light' ? 'text-linktext' : 'text-greentext'}`}>
-          <div className='underline pr-2'>
-          <a href="https://workintech.com.tr/" target="_blank" rel="noopener noreferrer">{t('viewSite')}</a></div>
-          <div className='underline'>
+        <div className={`flex flex-row gap-x-4 text-tiny lg:text-base" ${theme === 'light' ? 'text-linktext ' : 'text-greentext'}`}>
+          <div className='underline hover:font-bold'>
+          <a href="https://workintech.com.tr/" target="_blank" rel="noopener noreferrer ">{t('viewSite')}</a></div>
+          <div className='underline hover:font-bold '>
           <a href="https://github.com/yildiztunar" target="_blank" rel="noopener noreferrer">{t('gitHub')}</a></div>
           </div>
         </div>

@@ -23,7 +23,7 @@ function App() {
       <Login/>
       </Route>
 
-      <ProtectedRoute path="/resume">
+      <ProtectedRoute exact path="/resume">
         <Resume/>
       </ProtectedRoute>
       

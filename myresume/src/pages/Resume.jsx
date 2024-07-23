@@ -7,8 +7,7 @@ function Resume() {
   return (
     <>
     <div>
-      <Header/>
-      <MyResume/>
+      hello
     </div>
     </>
   )

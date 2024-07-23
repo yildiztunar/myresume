@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const { t } = useTranslation();
-    const theme = useSelector((state) => state.theme);
+    const theme = useSelector((store) => store.theme);
     
 
     return (
@@ -27,7 +27,7 @@ const Footer = () => {
         <img src={InstagramIcon} alt="Instagram" />
         </div>
         <Link to="/login">
-        <div className={`rounded-md text-tiny lg:text-xl px-6 py-2 font-semibold ${theme === 'light' ? 'bg-white text-buttontext border-buttonborder border-2' : 'bg-darkgreenbg text-white border-white border'}`}>
+        <div className={`rounded-md text-tiny lg:text-xl px-6 py-2 font-semibold ${theme === 'light' ? 'bg-white text-buttontext border-buttonborder border-2  hover:bg-purplebg hover:text-whitetext hover:border-white' : 'bg-darkgreenbg text-white border-white border  hover:bg-whitebg hover:text-darkgraytext'}`}>
             {t('moreInfo')}
         </div>
         </Link>

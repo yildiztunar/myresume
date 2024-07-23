@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const AboutMe = () => {
 const { t } = useTranslation();
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
 
     return (
       <div className='flex flex-col ml-4 gap-x-8'>

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 export default function Language() {
   const { t, i18n } = useTranslation();
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
 
   const changeLanguage = () => {
     const newLanguage = i18n.language === 'tr' ? 'en' : 'tr';

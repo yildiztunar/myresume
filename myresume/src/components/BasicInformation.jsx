@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 const BasicInformation = () => {
 const { t } = useTranslation();
-  const theme = useSelector((state) => state.theme);
 
     return (
       <div className="flex flex-col text-left gap-y-8">

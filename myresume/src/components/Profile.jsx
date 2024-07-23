@@ -7,7 +7,7 @@ import profileImage from '../assets/profile.png'
 
 const Profile = () => {
 const { t } = useTranslation();
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
 
     return (
         <div

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Skill = ({ name, image }) => {
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
 
   return (
     <div className="flex p-4 items-center">

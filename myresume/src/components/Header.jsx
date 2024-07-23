@@ -4,12 +4,11 @@ import { useTranslation } from "react-i18next";
 import bannerImg from "../assets/bannerImg.png";
 import Theme from "./Theme";
 import Language from "./Language";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 
 function Header() {
   const { t } = useTranslation();
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector((store) => store.theme);
 
 
   return (
@@ -33,11 +32,11 @@ function Header() {
           {t('meInformation')}
         </div>
         <div className="flex flex-row gap-2 text-tiny md:text-base lg:text-lg">
-          <div className={`rounded-md px-6 py-2 font-semibold ${theme === 'light' ? 'bg-white text-buttontext border-buttonborder border' : 'bg-darkgreenbg text-white border-white border'}`}>
+          <div className={`rounded-md px-6 py-2 font-semibold ${theme === 'light' ? 'bg-white hover:bg-purplebg hover:text-whitetext hover:border-white text-buttontext border-buttonborder border' : 'bg-darkgreenbg text-white border-white border hover:bg-whitebg hover:text-darkgraytext'}`}>
           <a href="https://github.com/yildiztunar" target="_blank" rel="noopener noreferrer" >
           GitHub</a>
           </div>
-          <div className={`rounded-md px-6 py-2 font-semibold ${theme === 'light' ? 'bg-white text-buttontext border-buttonborder border' : 'bg-darkgreenbg text-white border-white border'}`}>
+          <div className={`rounded-md px-6 py-2 font-semibold ${theme === 'light' ? 'bg-white hover:bg-purplebg hover:text-whitetext hover:border-white text-buttontext border-buttonborder border' : 'bg-darkgreenbg text-white border-white border hover:bg-whitebg hover:text-darkgraytext'}`}>
           <a href="https://www.linkedin.com/in/yildiz-ozdemir/" target="_blank" rel="noopener noreferrer">
           LinkedIn</a>
           </div>
