@@ -3,7 +3,7 @@ import BasicInformation from './BasicInformation';
 import AboutMe from './AboutMe';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import profileImage from '../assets/profile.png'
+import profileImage from '../assets/bannerImg.jpg'
 
 const Profile = () => {
 const { t } = useTranslation();
@@ -20,14 +20,14 @@ const { t } = useTranslation();
         </div>
         
         
-        <div className='flex flex-row '>
-          <div className='w-1/3 '>
+        <div className='flex flex-col items-center lg:flex-row gap-y-8'>
+          <div className='w-2/3 lg:w-2/6 '>
             <BasicInformation/>
           </div>
 
-          <div className='w-1/3 '><img className="rounded-[10px] shadow-profileImg mx-2" src={profileImage} /></div>
+          <div className='w-1/3 lg:w-1/6 '><img className="rounded-[10px]  shadow-profileImg mx-2" src={profileImage} /></div>
 
-          <div className='w-1/3'>
+          <div className='w-2/3 lg:w-3/6'>
             <AboutMe/>
           </div>
         </div>
