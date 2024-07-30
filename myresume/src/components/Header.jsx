@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-import bannerImg from "../assets/bannerImg.png";
+import bannerImg from "../assets/bannerImg.jpg";
 import Theme from "./Theme";
 import Language from "./Language";
 
