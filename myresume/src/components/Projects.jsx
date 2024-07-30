@@ -1,6 +1,6 @@
 import React from 'react';
-import Workintech from '../assets/workintech.jpg';
-import Journey from '../assets/journey.jpg';
+import TechnologicalMeals from '../assets/technological-meals.png';
+import Resume from '../assets/resume.jpg';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import Project from './Project';
@@ -10,8 +10,18 @@ const Projects = () => {
   const theme = useSelector((store) => store.theme);
 
   const projectData = [
-    { title: t('project1Title'), image: Workintech, description: t('project1Information'), programs: ['react', 'redux', 'vercel'] },
-    { title: t('project2Title'), image: Journey, description: t('project2Information'), programs: ['react', 'redux', 'vercel'] },
+    { title: t('project1Title'),
+      image: Resume,
+      description: t('project1Information'),
+      programs: ['react', 'redux', 'hook form','i18next','axios','tailwindCSS','toastify','vercel'],
+      viewsite:"https://yildiztunar-resume.vercel.app/",
+      github:"https://github.com/yildiztunar/personal/tree/main/myresume" },
+    { title: t('project2Title'),
+      image: TechnologicalMeals,
+      description: t('project2Information'),
+      programs: ['react', 'styled-components', 'hooks', 'cypress', 'vercel'],
+      viewsite:"https://technological-meals.vercel.app/",
+      github:"https://github.com/yildiztunar/order-pizza" },
   ];
 
   return (
@@ -32,6 +42,8 @@ const Projects = () => {
               image={project.image} 
               description={project.description} 
               programs={project.programs}
+              viewsite={project.viewsite}
+              github={project.github}
             />
           ))}
         
