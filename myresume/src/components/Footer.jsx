@@ -13,7 +13,7 @@ const Footer = () => {
     
 
     return (
-        <div className={`flex flex-col items-center py-2 md:py-16 gap-y-5 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
+        <div className={`flex flex-col w-screen items-center py-2 md:py-16 gap-y-5 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
         >
 
         <div className={`text-2xl lg:text-5xl font-bold max-w-lg ${theme === 'light' ? 'text-purpletext' : 'text-footerlilactext'}`}>{t('contactTitle')}</div>

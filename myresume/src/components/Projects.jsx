@@ -26,7 +26,7 @@ const Projects = () => {
 
   return (
     <div
-      className={`flex px-2 md:px-32 py-2 md:py-16  ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}
+      className={`flex px-2 w-screen md:px-32 py-2 md:py-16  ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}
     >
         <div
         className={`text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}

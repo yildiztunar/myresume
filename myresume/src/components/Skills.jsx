@@ -26,14 +26,14 @@ const Skills = () => {
 
   return (
     <div
-      className={`flex flex-col lg:flex-row px-4 py-2 md:px-32 gap-y-8 gap-x-2 md:py-16 lg:gap-x-32 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
+      className={`flex flex-col w-screen lg:flex-row px-4 py-2 md:px-32 gap-y-8 gap-x-2 md:py-16 lg:gap-x-32 ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
     >
       <div
         className={`text-2xl lg:text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}
       >
         {t('skillsTitle')}
       </div>
-      <div className="grid lg:grid-cols-2 md:grid-cols-3 xs:grid-cols-3 justify-between gap-x-16 lg:gap-x-36">
+      <div className="grid lg:grid-cols-3 md:grid-cols-3 xs:grid-cols-3 justify-between gap-x-16 lg:gap-x-36">
           {skillsData.map((skill, index) => (
             <Skill key={index} name={skill.name} image={skill.image} />
           ))}

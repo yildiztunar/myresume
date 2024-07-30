@@ -12,7 +12,7 @@ function Header() {
 
 
   return (
-   <div className="flex flex-row text-left ">
+   <div className="flex flex-row text-left w-screen">
     
     <div className={`flex flex-col w-4/6 pl-2 md:pl-32 pb-2 md:pb-32 gap-y-2 md:gap-y-32 ${theme === 'light' ? 'bg-purplebg' : 'bg-bluebg'}`}>
       <div className="flex flex-col">
@@ -50,7 +50,7 @@ function Header() {
           <Theme />
         </div>
         <div className="flex justify-center items-center w-full h-full">
-          <div className="relative w-4/5 ml-[-5px] md:ml-[-250px] lg:ml-[-400px]">
+          <div className="relative w-3/5 ml-[-5px] md:ml-[-250px] lg:ml-[-500px]">
             <img src={bannerImg} className="rounded-2xl shadow-bannerImg" />
           </div>
         </div>

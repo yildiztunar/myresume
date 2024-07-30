@@ -11,7 +11,7 @@ const { t } = useTranslation();
 
     return (
         <div
-        className={`flex flex-col px-4 md:px-32 py-2 md:py-16 gap-y-8 ${theme === 'light' ? 'bg-purplebg' : 'bg-bluebg'}`}
+        className={`flex flex-col w-screen px-4 md:px-32 py-2 md:py-16 gap-y-8 ${theme === 'light' ? 'bg-purplebg' : 'bg-bluebg'}`}
       >
         <div
           className="text-2xl lg:text-5xl font-bold text-left text-[#CBF180]"
@@ -21,15 +21,15 @@ const { t } = useTranslation();
         
         
         <div className='flex flex-col items-center lg:flex-row gap-y-8'>
-          <div className='w-2/3 lg:w-2/6 '>
+          <div className='w-1/2 lg:w-1/3 '>
             <BasicInformation/>
           </div>
-
-          <div className='w-1/3 lg:w-1/6 '><img className="rounded-[10px]  shadow-profileImg mx-2" src={profileImage} /></div>
-
-          <div className='w-2/3 lg:w-3/6'>
+        <div className='flex flex-col lg:flex-row w-1/2 lg:w-2/3 '>
+          <div><img className="rounded-[10px] shadow-profileImg mx-2" src={profileImage} /></div>
+          <div>
             <AboutMe/>
           </div>
+        </div>
         </div>
 
 
