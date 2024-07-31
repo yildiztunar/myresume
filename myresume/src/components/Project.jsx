@@ -13,7 +13,7 @@ const Project = ({ title, image, description, programs, viewsite, github }) => {
         </div>
       
         <div
-        className={`flex flex-col lg:w-4/6 leading-tight text-left px-12 py-14 gap-y-4 rounded-r-xl ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
+        className={`flex flex-col justify-center lg:w-4/6 leading-tight text-left px-12 py-14 gap-y-4 rounded-r-xl ${theme === 'light' ? 'bg-whitebg' : 'bg-darkpurplebg'}`}
         >
       <h1 className={`text-xl lg:text-4xl font-bold " ${theme === 'light' ? 'text-purpletext' : 'text-lilactext'}`}>{title}</h1>
       <p className={`text-tiny lg:text-lg " ${theme === 'light' ? 'text-darkgraytext' : 'text-whitetext'}`}>{description}</p>
