@@ -12,19 +12,19 @@ function Login() {
 
 
   return (
-   <div className="flex flex-col text-left md:flex-row">
+   <div className="flex flex-col items-center w-screen h-screen text-left md:flex-row">
     
-    <div className={`flex flex-col w-auto md:w-7/12 pl-12 md:pl-32 pb-12 md:pb-32 gap-y-2 md:gap-y-16 ${theme === 'light' ? 'bg-purplebg' : 'bg-bluebg'}`}>
+    <div className={`flex flex-col w-screen h-1/2 md:w-7/12 md:h-screen pl-12 md:pl-32 pb-12 md:pb-32 gap-y-2 md:gap-y-16 ${theme === 'light' ? 'bg-purplebg' : 'bg-bluebg'}`}>
       <div className="flex flex-col ">
         <div className="flex justify-end ">
           <Language />
         </div>
-        <div className="text-base text-greentext font-semibold lg:text-4xl pt-16">
+        <div className="text-base text-greentext font-semibold lg:text-4xl pt-2">
           yıldız
         </div>
       </div>
 
-      <div className="flex flex-col gap-y-9 w-10/12">
+      <div className="flex flex-col justify-center h-full gap-y-9 w-10/12">
         <div className="text-2xl text-greentext font-semibold leading-none lg:text-6xl">
           {t('meTitle')}
         </div>
@@ -45,20 +45,20 @@ function Login() {
 
     </div>
 
-    <div className={`flex flex-col w-auto md:w-5/12 ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}>
+    <div className={`flex flex-col w-screen h-1/2 md:w-5/12 md:h-screen ${theme === 'light' ? 'bg-greenbg' : 'bg-darkgreenbg'}`}>
         <div>
           <Theme />
         </div>
+        
         <div className="flex flex-col items-center justify-center h-full">
-        <div className={`text-2xl lg:text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}>
-          {t('loginTitle')}
-        </div>
-        <div>
-          <LoginForm/>
+          <div className={`text-2xl lg:text-5xl font-bold text-left ${theme === 'light' ? 'text-purpletext' : 'text-greentext'}`}>
+            {t('loginTitle')}
+          </div>
+          <div>
+            <LoginForm/>
           </div>
         </div>
-      </div>
-            
+    </div>
 
   </div>
   );
